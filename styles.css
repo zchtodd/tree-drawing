@@ -1,0 +1,42 @@
+@font-face{
+    font-family:"Bebas Neue W01 Regular";
+    src:url("bebas.ttf") format("truetype");
+}
+
+body {
+    font-family: "Titillium Web", sans-serif;
+    background-color: #1e1e20;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    color: white;
+    padding: 3%;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Bebas Neue W01 Regular", sans-serif;
+    flex: 1;
+    color: steelblue;
+}
+
+svg {
+    flex: 30;
+}
+
+.tree-node {
+    stroke: steelblue;
+    fill: #1E1E20;
+}
+
+.tree-line {
+    stroke: steelblue;
+    fill: none;
+}
+
+.tree-label {
+    text-anchor: middle;
+    stroke: white;
+    fill: none;
+}

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap"
+        />
+        <link rel="stylesheet" href="/styles.css" />
+        <script src="/tree.js"></script>
+    </head>
+    <body>
+        <h1>Tree Drawing Algorithm</h1>
+        <p>
+        This is a demo of the Reingold-Tilford tree drawing algorithm!  
+        The <a href="https://practicum.tech/recurser/">Recurser</a> web app uses this algorithm to trace recursive function calls.
+        </p>
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(0, 50)"></g>
+        </svg>
+        <script>
+            let root = {
+                value: "A",
+                children: [
+                    {
+                        value: "B",
+                        children: [
+                            {value: "C", children: []},
+                        ]
+                    },
+                    {
+                        value: "D",
+                        children: [
+                            {value: "E", children: []},
+                            {value: "F", children: []},
+                            {value: "G", children: []}, 
+                        ]
+                    }
+                ]
+            };
+
+            let svgNode = document.querySelector("svg g");
+            let renderer = new TreeRenderer(root, svgNode);
+            renderer.draw();
+        </script>
+    </body>
+</html>
